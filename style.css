@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(202, 83, 103);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drag-container {
+  width: 600px;
+  height: 450px;
+  background-color: transparent;
+  border: 2px dotted white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.drag-container.active {
+  border: 2px solid white;
+}
+
+.drag-container h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+  outline: none;
+}
+.drag-container button {
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: white;
+  transition: background ease-in-out 0.3s;
+}
+.drag-container button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.drag-container input {
+  display: none;
+}
+
+.drag-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .drag-container {
+    width: 400px;
+    height: 250px;
+  }
+  .drag-container h2 {
+    font-size: 1.3rem;
+  }
+  .drag-container button {
+    padding: 0.7rem 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .drag-container {
+    width: 80%;
+    height: 250px;
+  }
+}
